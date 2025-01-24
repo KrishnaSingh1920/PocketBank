@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PocketBank</title>
+    <link rel="stylesheet" href="styles.css">
+    <audio id="money-sound" src="Money.mp3" preload="auto"></audio>
+    <audio id="fail-sound" src="Fail.mp3" preload="auto"></audio>
+</head>
+<body class="animation">
+    <!-- Empty Navbar -->
+    <nav class="navbar animation">
+        
+        <ul>
+          <a href="">POCKETBANK</a> 
+        </ul>
+    </nav>
+
+    <!-- Bank Containers -->
+     <div class="box">
+        <div class="bank-container animation wal1" id="bank1">
+            <h1>
+                <span id="wallet-name-1" contenteditable="true" onblur="updateWalletName(1)">Bank</span>
+            </h1>
+            <h2 class="balance">₹0</h2>
+            <div class="form-container">
+                <input type="number" class="amount" placeholder="Enter amount" />
+                <div class="button-container">
+                    <button class="deposit">Deposit</button>
+                    <button class="withdraw">Withdraw</button>
+                </div>
+            </div>
+            <p class="message"></p>
+        </div>
+        
+        <div class="bank-container animation wal2" id="bank2">
+            <h1>
+                <span id="wallet-name-2" contenteditable="true" onblur="updateWalletName(2)">Bank</span>
+            </h1>
+            <h2 class="balance">₹0</h2>
+            <div class="form-container">
+                <input type="number" class="amount" placeholder="Enter amount" />
+                <div class="button-container">
+                    <button class="deposit">Deposit</button>
+                    <button class="withdraw">Withdraw</button>
+                </div>
+            </div>
+            <p class="message"></p>
+        </div>
+    
+        <div class="bank-container animation wal3" id="bank3">
+            <h1>
+                <span id="wallet-name-3" contenteditable="true" onblur="updateWalletName(3)">Bank</span>
+            </h1>
+            <h2 class="balance">₹0</h2>
+            <div class="form-container">
+                <input type="number" class="amount" placeholder="Enter amount" />
+                <div class="button-container">
+                    <button class="deposit">Deposit</button>
+                    <button class="withdraw">Withdraw</button>
+                </div>
+            </div>
+            <p class="message"></p>
+        </div>
+    
+        <div class="bank-container animation wal4" id="bank4">
+            <h1>
+                <span id="wallet-name-4" contenteditable="true" onblur="updateWalletName(4)">Bank</span>
+            </h1>
+            <h2 class="balance">₹0</h2>
+            <div class="form-container">
+                <input type="number" class="amount" placeholder="Enter amount" />
+                <div class="button-container">
+                    <button class="deposit">Deposit</button>
+                    <button class="withdraw">Withdraw</button>
+                </div>
+            </div>
+            <p class="message"></p>
+        </div>
+    
+        <button id="transaction-log-button">Transaction Log</button>
+        <div id="transaction-log-popup" class="popup">
+            <div class="popup-content">
+                <h2>Transaction Log</h2>
+                <ul id="transaction-list"></ul>
+                <button id="close-popup">Close</button>
+                <button id="clear-log">Clear Log</button>
+            </div>
+        </div>
+
+     </div>
+   
+
+    <!-- Empty Footer -->
+    <footer class="footer animation">
+    &copy;<span>PocketBank</span> All Rights Reserved
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
