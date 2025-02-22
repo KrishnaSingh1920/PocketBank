@@ -1,15 +1,18 @@
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(315deg, #ffa698, #c5ffc4, #9facff, #c285ff); /* 4-color gradient */
-    background-size: 400% 400%;
+    background: linear-gradient(315deg, #9facff, #c285ff, #9facff, #c285ff);
+    /* 4-color gradient */
+    background-size: 200% 200%;
     margin: 0;
 }
-.box
-{
+
+.box {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
 }
+
 /* Navbar Styles */
 .navbar {
     background: linear-gradient(315deg, #000000 3%, #434343 38%, #616161 68%, #808080 98%);
@@ -56,17 +59,18 @@ footer {
     background: #ffffff;
     border-radius: 10px;
     padding: 15px;
-    padding-top: 60px;
     padding-bottom: 60px;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 10px 10px rgba(0, 0, 0, 0.2); /* Brighter and more prominent shadows */
-    width: 300px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 10px 10px rgba(0, 0, 0, 0.2);
+    /* Brighter and more prominent shadows */
+    width: 275px;
     margin: 25px;
-    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; 
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 
 .bank-container:hover {
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 15px 15px rgba(0, 0, 0, 0.25); /* More intense shadow on hover */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 15px 15px rgba(0, 0, 0, 0.25);
+    /* More intense shadow on hover */
     transform: scale(1.05);
 }
 
@@ -77,9 +81,11 @@ h1 {
     align-items: center;
     gap: 10px;
     padding-bottom: 15px;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.4); /* Green glow effect */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    /* Green glow effect */
     transition: text-shadow 0.3s ease-in-out;
 }
+
 button#edit-name-btn {
     background-image: url("EditButton.png");
     background-size: contain;
@@ -99,7 +105,8 @@ button#edit-name-btn {
     color: #4caf50;
     margin: 10px 0;
     padding-bottom: 15px;
-    text-shadow: 0 0 10px rgba(76, 175, 80, 0.8); /* Green glow effect */
+    text-shadow: 0 0 10px rgba(76, 175, 80, 0.8);
+    /* Green glow effect */
     transition: text-shadow 0.3s ease-in-out;
 }
 
@@ -154,12 +161,14 @@ button.deposit {
     border-radius: 5px;
     padding: 10px;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 15px rgba(76, 175, 80, 0.6); /* Green shadow and glow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 15px rgba(76, 175, 80, 0.6);
+    /* Green shadow and glow */
     transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 button.deposit:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), 0 0 25px rgba(76, 175, 80, 0.8); /* Brighter green glow */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), 0 0 25px rgba(76, 175, 80, 0.8);
+    /* Brighter green glow */
     transform: scale(1.05);
 }
 
@@ -170,34 +179,50 @@ button.withdraw {
     border-radius: 5px;
     padding: 10px;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 15px rgba(244, 67, 54, 0.6); /* Red shadow and glow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 15px rgba(244, 67, 54, 0.6);
+    /* Red shadow and glow */
     transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 button.withdraw:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), 0 0 25px rgba(244, 67, 54, 0.8); /* Brighter red glow */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), 0 0 25px rgba(244, 67, 54, 0.8);
+    /* Brighter red glow */
     transform: scale(1.05);
 }
 
+.transaction {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
 #transaction-log-button {
+    max-width: 150px;
+    max-height: 75px;
     margin: 20px;
     padding: 10px;
-    background: linear-gradient(315deg, #1e3c72, #2a5298, #4b79a1, #6a8eb0); /* Dark blue gradient */
+    background: linear-gradient(315deg, #1e3c72, #2a5298, #4b79a1, #6a8eb0);
+    /* Dark blue gradient */
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Initial 3D shadow */
-    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out, background 3s ease-in-out; /* Smooth transitions for shadow, scaling, and gradient */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Initial 3D shadow */
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out, background 3s ease-in-out;
+    /* Smooth transitions for shadow, scaling, and gradient */
     animation: gradient 5s ease infinite;
     background-size: 400% 400%;
 }
 
 /* Hover effect: Increase size, shadow, and enhance gradient */
 #transaction-log-button:hover {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4), 0 4px 8px rgba(0, 0, 0, 0.3); /* Brighter shadow */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4), 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Brighter shadow */
     transform: scale(1.1);
-    background: linear-gradient(315deg, #2a5298, #4b79a1, #1e3c72, #6a8eb0); /* Dark blue gradient with slight shift */
+    background: linear-gradient(315deg, #2a5298, #4b79a1, #1e3c72, #6a8eb0);
+    /* Dark blue gradient with slight shift */
     animation: gradient 5s ease infinite;
     background-size: 400% 400%;
 }
@@ -228,12 +253,12 @@ button.withdraw:hover {
     transform: translateY(-150px);
     transition: transform 0.3s ease-in-out;
     max-height: 80vh;
-    overflow-y: auto; 
-    scrollbar-width: none; 
-    -ms-overflow-style: none; 
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
-.popup-content::-webkit-scrollbar { 
+.popup-content::-webkit-scrollbar {
     display: none;
 }
 
@@ -253,17 +278,22 @@ button.withdraw:hover {
     margin-bottom: 10px;
     background: linear-gradient(315deg, #f3f4f6 3%, #d1d5db 38%, #9ca3af 68%, #ffffff 98%);
     background-size: 400% 400%;
-    animation: gradient 7.5s ease infinite;/* White background for each item */
-    border-radius: 5px; /* Rounded corners for each transaction */
-    transition:transform 0.3s ease; /* Smooth transitions */
+    animation: gradient 7.5s ease infinite;
+    /* White background for each item */
+    border-radius: 5px;
+    /* Rounded corners for each transaction */
+    transition: transform 0.3s ease;
+    /* Smooth transitions */
 }
 
 #transaction-list li:hover {
     background: linear-gradient(315deg, #f3f4f6 3%, #d1d5db 38%, #9ca3af 68%, #ffffff 98%);
     background-size: 400% 400%;
     animation: gradient 5s ease infinite;
-    transform: scale(1.02); /* Slight zoom effect */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Slight shadow on hover */
+    transform: scale(1.02);
+    /* Slight zoom effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Slight shadow on hover */
 }
 
 #transaction-list.clearing {
@@ -287,8 +317,10 @@ button.withdraw:hover {
 }
 
 
-#clear-log, #close-popup {
-    background: linear-gradient(315deg, #4caf50, #81c784); /* Green gradient */
+#clear-log,
+#close-popup {
+    background: linear-gradient(315deg, #4caf50, #81c784);
+    /* Green gradient */
     color: white;
     border: none;
     padding: 10px 20px;
@@ -296,36 +328,48 @@ button.withdraw:hover {
     cursor: pointer;
     margin-top: 10px;
     font-weight: bold;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Initial subtle shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Initial subtle shadow */
     transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out, background 0.3s ease-in-out;
     font-size: 16px;
 }
 
 #clear-log {
-    background: linear-gradient(315deg, #f44336, #ef5350); /* Red gradient */
+    background: linear-gradient(315deg, #f44336, #ef5350);
+    /* Red gradient */
 }
 
 #clear-log:hover {
-    background: linear-gradient(315deg, #ef5350, #f44336); /* Reverse gradient on hover */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* More intense shadow */
-    transform: scale(1.05); /* Slightly bigger on hover */
+    background: linear-gradient(315deg, #ef5350, #f44336);
+    /* Reverse gradient on hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    /* More intense shadow */
+    transform: scale(1.05);
+    /* Slightly bigger on hover */
 }
 
 #close-popup:hover {
-    background: linear-gradient(315deg, #81c784, #4caf50); /* Reverse green gradient */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Brighter shadow */
-    transform: scale(1.05); /* Slight zoom effect */
+    background: linear-gradient(315deg, #81c784, #4caf50);
+    /* Reverse green gradient */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    /* Brighter shadow */
+    transform: scale(1.05);
+    /* Slight zoom effect */
 }
 
-#clear-log, #close-popup {
+#clear-log,
+#close-popup {
     transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out, background 0.3s ease-in-out;
     background-size: 400% 400%;
 }
 
 /* Add glow effect when buttons are active or focused */
-#clear-log:active, #close-popup:active {
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7); /* Glowing effect */
-    transform: scale(1.05); /* Slight scale on click */
+#clear-log:active,
+#close-popup:active {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+    /* Glowing effect */
+    transform: scale(1.05);
+    /* Slight scale on click */
 }
 
 /* For the transaction log items */
@@ -342,11 +386,9 @@ button.withdraw:hover {
     opacity: 0;
 }
 
-span
-{
+span {
     padding: 10px;
 }
-
 
 .animation {
     animation: gradient 10s ease infinite;
@@ -386,3 +428,26 @@ span
     background-size: 400% 400%;
 }
 
+@media (max-width: 768px) {
+    .box {
+        flex-direction: column;
+    }
+}
+
+.logo {
+    font-family: 'Times New Roman', Times, serif;
+    background: linear-gradient(315deg,
+            #e3e7ff,
+            #eddbff,
+            #edf0ff,
+            #e5cbff);
+    font-size: 50px;
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400% 400%;
+    animation: gradient 5s infinite linear;
+    text-shadow: 2px 2px 5px rgba(37, 40, 62, 0.6),
+        4px 4px 10px rgba(55, 44, 66, 0.5),
+        6px 6px 15px rgba(29, 32, 52, 0.4);
+}

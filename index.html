@@ -8,15 +8,9 @@
     <audio id="money-sound" src="Money.mp3" preload="auto"></audio>
     <audio id="fail-sound" src="Fail.mp3" preload="auto"></audio>
 </head>
-<body class="animation">
-    <!-- Empty Navbar -->
-    <nav class="navbar animation">
-        
-        <ul>
-          <a href="">POCKETBANK</a> 
-        </ul>
-    </nav>
-
+<body>
+    
+    <h1 class="logo">Pocket Bank</h1>
     <!-- Bank Containers -->
      <div class="box">
         <div class="bank-container animation wal1" id="bank1">
@@ -78,8 +72,11 @@
             </div>
             <p class="message"></p>
         </div>
-    
-        <button id="transaction-log-button">Transaction Log</button>
+
+        <div class="transaction">
+            <button id="transaction-log-button">Transaction Log</button>
+        </div>
+        
         <div id="transaction-log-popup" class="popup">
             <div class="popup-content">
                 <h2>Transaction Log</h2>
@@ -90,14 +87,6 @@
         </div>
 
      </div>
-   
-
-    <!-- Empty Footer -->
-    <footer class="footer animation">
-    &copy;<span>PocketBank</span> All Rights Reserved
-    </footer>
-
-
     <script src="script.js"></script>
 </body>
 </html>
